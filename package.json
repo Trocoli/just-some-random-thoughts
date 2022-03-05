@@ -1,0 +1,35 @@
+{
+  "name": "just_some_random_thoughts",
+  "version": "1.0.0",
+  "description": "Random thoughts nodejs program",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./index.js localhost 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Trocoli/just-some-random-thoughts.git"
+  },
+  "author": "YgorT",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Trocoli/just-some-random-thoughts/issues"
+  },
+  "homepage": "https://github.com/Trocoli/just-some-random-thoughts#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.2",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.6",
+    "cookie-session": "^2.0.0",
+    "express": "^4.17.3",
+    "express-flash": "0.0.2",
+    "express-handlebars": "^6.0.2",
+    "express-session": "^1.17.2",
+    "nodemon": "^2.0.15",
+    "pg": "^8.7.3",
+    "sequelize": "^6.17.0",
+    "session-file-store": "^1.5.0"
+  }
+}
