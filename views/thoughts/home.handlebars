@@ -1,1 +1,42 @@
-<h1>All thoughts: </h1>
+<div class="home-header">
+    {{#if search}}
+    <h1>You are looking for: <span>{{search}}</span></h1>
+    {{#if thoughtsQty}}
+    <p><span>{{thoughtsQty}}</span> thoughts found</p>
+    {{else}}
+    <p>Can't fing any thought with these terms...</p>
+    {{/if}}
+    {{else}}
+    <h1>Here are some <span>thoughts</span></h1>
+    {{/if}}
+    <form action="/" method="GET">
+    <input type="text" name="search" placeholder="Looking for a thought?">
+    <input type="submit" class="btn" value="Search">
+    </form>
+    <div class="order-container">
+        <span>Order By</span>
+        <form action="/" method="GET">
+        <input type="hidden" name="search" value="{{this.search}}">
+        <input type="hidden" name="order" value="new">
+        <button type="submit"><i class="bi bi-arrow-up"></i></button>
+        </form>
+        <form action="/" method="GET">
+        <input type="hidden" name="search" value="{{this.search}}">
+        <input type="hidden" name="order" value="old">
+        <button type="submit"><i class="bi bi-arrow-down"></i></button>
+        </form>
+        <a href="/">Clear</a>
+    </div>
+</div>
+<div class="thoughts-container">
+    {{#each thoughts}}
+    <figure>
+        <blockquote>
+            "{{this.title}}"
+        </blockquote>
+        <figcaption>
+            thinker: <span>{{this.User.name}}</span>
+        </figcaption>
+    </figure>
+    {{/each}}
+</div>
